@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:maat/maat.dart';
-import 'package:maat_amarna/maat_amarna.dart';
+import 'package:amarna/amarna.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -33,7 +33,7 @@ void main() {
       final source = generated.readAsStringSync();
       expect(
         source,
-        contains("import 'package:maat_amarna/maat_amarna.dart';"),
+        contains("import 'package:amarna/amarna.dart';"),
       );
       expect(source, contains('class OrderShippedMail extends Mailable'));
       expect(source, contains('Envelope envelope()'));
@@ -45,22 +45,22 @@ void main() {
       final amarnaPath = Directory.current.path;
       final packages = Directory.current.parent.uri;
       final maatPath = packages.resolve('maat').toFilePath();
-      final khnumPath = packages.resolve('maat_khnum').toFilePath();
-      final khnumCorePath = packages.resolve('maat_khnum_core').toFilePath();
+      final khnumPath = packages.resolve('khnum_maat').toFilePath();
+      final khnumCorePath = packages.resolve('khnum').toFilePath();
       File.fromUri(directory.uri.resolve('pubspec.yaml')).writeAsStringSync('''
 name: generated_mail_app
 publish_to: none
 environment:
   sdk: ^3.12.0
 dependencies:
-  maat_amarna:
+  amarna:
     path: $amarnaPath
 dependency_overrides:
   maat:
     path: $maatPath
-  maat_khnum:
+  khnum_maat:
     path: $khnumPath
-  maat_khnum_core:
+  khnum:
     path: $khnumCorePath
 ''');
       final pubGet = await Process.run('dart', [

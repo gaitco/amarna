@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:maat/maat.dart';
-import 'package:maat_amarna/maat_amarna.dart';
+import 'package:amarna/amarna.dart';
 import 'package:test/test.dart';
 
 Config mailConfig() => Config({

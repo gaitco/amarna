@@ -16,7 +16,7 @@ class MakeMailCommand extends GeneratorCommand {
   @override
   String stub(String className) =>
       '''
-import 'package:maat_amarna/maat_amarna.dart';
+import 'package:amarna/amarna.dart';
 
 class $className extends Mailable {
   @override
