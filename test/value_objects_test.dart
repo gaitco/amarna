@@ -1,4 +1,4 @@
-import 'package:maat_amarna/maat_amarna.dart';
+import 'package:amarna/amarna.dart';
 import 'package:test/test.dart';
 
 class Recipient {

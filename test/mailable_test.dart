@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:maat/maat.dart';
-import 'package:maat_amarna/maat_amarna.dart';
-import 'package:maat_khnum/maat_khnum.dart';
+import 'package:amarna/amarna.dart';
+import 'package:khnum_maat/khnum_maat.dart';
 import 'package:test/test.dart';
 
 class ReceiptMail extends Mailable {

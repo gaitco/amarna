@@ -1,5 +1,5 @@
 import 'package:maat/maat.dart';
-import 'package:maat_khnum/maat_khnum.dart';
+import 'package:khnum_maat/khnum_maat.dart';
 
 import 'address.dart';
 import 'email.dart';
